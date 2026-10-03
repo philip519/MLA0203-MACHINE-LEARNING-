@@ -1,5 +1,4 @@
 # FIND-S Algorithm
-
 data = [
     ['Sunny', 'Warm', 'Normal', 'Strong', 'Warm', 'Same', 'Yes'],
     ['Sunny', 'Warm', 'High', 'Strong', 'Warm', 'Same', 'Yes'],
@@ -7,11 +6,10 @@ data = [
     ['Sunny', 'Warm', 'High', 'Strong', 'Cool', 'Change', 'Yes']
 ]
 
-# Start with the most specific hypothesis
 h = ['0', '0', '0', '0', '0', '0']
 
 for row in data:
-    if row[-1] == 'Yes':       # Consider only positive examples
+    if row[-1] == 'Yes':       
         for i in range(len(h)):
             if h[i] == '0':
                 h[i] = row[i]
